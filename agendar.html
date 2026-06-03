@@ -116,16 +116,16 @@
             <label for="servicio">Tipo de consulta</label>
             <select id="servicio">
               <option value="">Seleccionar servicio...</option>
-              <option>Teleorientación veterinaria</option>
-              <option>Emisión de órdenes y recetas médicas</option>
-              <option>Consulta preventiva</option>
-              <option>Vacunación y desparasitación</option>
-              <option>Certificados de viaje</option>
-              <option>Control de pacientes crónicos</option>
-              <option>Cuidados paliativos</option>
-              <option>Segunda opinión veterinaria</option>
-              <option>Asesoría nutricional</option>
-              <option>Toma y procesamiento de muestras</option>
+              <option value="teleorientacion">Teleorientación veterinaria</option>
+              <option value="recetas">Emisión de órdenes y recetas médicas</option>
+              <option value="preventiva">Consulta preventiva</option>
+              <option value="vacunacion">Vacunación y desparasitación</option>
+              <option value="certificados">Certificados de viaje</option>
+              <option value="cronicos">Control de pacientes crónicos</option>
+              <option value="paliativos">Cuidados paliativos</option>
+              <option value="segunda-opinion">Segunda opinión veterinaria</option>
+              <option value="nutricion">Asesoría nutricional</option>
+              <option value="muestras">Toma y procesamiento de muestras</option>
             </select>
           </div>
 
@@ -172,5 +172,14 @@
   <p>Zooluciones Veterinarias Integrales, siempre conectados contigo!</p>
   <span class="foot-heart">♥</span>
 </footer>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const servicio = params.get('servicio');
+  if (servicio) {
+    const select = document.getElementById('servicio');
+    select.value = servicio;
+    select.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+</script>
 </body>
 </html>
