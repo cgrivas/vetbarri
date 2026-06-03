@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agendar Consulta – VetBarri.cl</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    .form-body { padding: 26px 28px; }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-group { margin-bottom: 0; }
+
+    .radio-group { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
+    .radio-option { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 0.9rem; cursor: pointer; }
+    .radio-option input[type="radio"] { width: 18px; height: 18px; accent-color: var(--pink); cursor: pointer; }
+
+    .form-note {
+      text-align: center;
+      font-size: 0.83rem;
+      font-weight: 600;
+      color: var(--text-mid);
+      margin-top: 16px;
+      padding: 12px 16px;
+      background: #f3e8ff;
+      border-radius: 8px;
+      border: 1px solid var(--violet-light);
+    }
+
+    @media (max-width: 600px) {
+      .form-grid { grid-template-columns: 1fr; }
+      .form-body { padding: 18px; }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrap">
+
+  <header>
+    <span class="star" style="top:10px;left:10px">✦</span>
+    <span class="star" style="top:40px;left:30px;font-size:0.6rem">✦</span>
+    <span class="star" style="top:5px;right:60px;font-size:0.7rem">✦</span>
+    <span class="star" style="top:50px;right:20px">✦</span>
+    <div class="logo-row">
+      <a href="index.html"><span class="logo-icon">🩺</span></a>
+      <a href="index.html" class="brand-name">@VETBARRI.CL</a>
+      <span class="paw-deco">🐾</span>
+    </div>
+    <p class="tagline">
+      <span class="tagline-heart">♥</span>
+      TU RED VETERINARIA DIGITAL
+      <span class="tagline-heart">♥</span>
+    </p>
+  </header>
+
+  <nav>
+    <a href="index.html" class="nav-link">Inicio</a>
+    <a href="servicios.html" class="nav-link">Servicios</a>
+    <a href="agendar.html" class="nav-link active">Agendar Consulta</a>
+    <a href="contacto.html" class="nav-link">Contacto</a>
+  </nav>
+
+  <div class="page-intro">
+    <h1>🗓️ AGENDAR CONSULTA</h1>
+    <p>Completa el formulario y te contactaremos a la brevedad para confirmar tu hora.</p>
+  </div>
+
+  <div class="retro-window">
+    <div class="retro-titlebar">
+      <span>NUEVA SOLICITUD 🐾</span>
+      <div class="win-btns">
+        <div class="win-btn">─</div>
+        <div class="win-btn">□</div>
+        <div class="win-btn">✕</div>
+      </div>
+    </div>
+    <div class="form-body">
+      <form action="#" onsubmit="return false;">
+        <div class="form-grid">
+
+          <div class="form-group">
+            <label for="pet-name">Nombre de tu mascota</label>
+            <input type="text" id="pet-name" placeholder="Ej: Luna" />
+          </div>
+
+          <div class="form-group">
+            <label for="especie">Especie</label>
+            <select id="especie">
+              <option value="">Seleccionar...</option>
+              <option>Perro</option>
+              <option>Gato</option>
+              <option>Ave</option>
+              <option>Otro</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="owner-name">Tu nombre completo</label>
+            <input type="text" id="owner-name" placeholder="Ej: Ana González" />
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Teléfono de contacto</label>
+            <input type="tel" id="phone" placeholder="+56 9 XXXX XXXX" />
+          </div>
+
+          <div class="form-group full">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" placeholder="tu@correo.cl" />
+          </div>
+
+          <div class="form-group full">
+            <label for="servicio">Tipo de consulta</label>
+            <select id="servicio">
+              <option value="">Seleccionar servicio...</option>
+              <option>Teleorientación veterinaria</option>
+              <option>Emisión de órdenes y recetas médicas</option>
+              <option>Consulta preventiva</option>
+              <option>Vacunación y desparasitación</option>
+              <option>Certificados de viaje</option>
+              <option>Control de pacientes crónicos</option>
+              <option>Cuidados paliativos</option>
+              <option>Segunda opinión veterinaria</option>
+              <option>Asesoría nutricional</option>
+              <option>Toma y procesamiento de muestras</option>
+            </select>
+          </div>
+
+          <div class="form-group full">
+            <label>Modalidad de atención</label>
+            <div class="radio-group">
+              <label class="radio-option">
+                <input type="radio" name="modalidad" value="online" checked />
+                💻 Consulta Online
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="modalidad" value="domicilio" />
+                🚑 A Domicilio
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="fecha">Fecha preferida</label>
+            <input type="date" id="fecha" />
+          </div>
+
+          <div class="form-group">
+            <label for="hora">Hora preferida</label>
+            <input type="time" id="hora" />
+          </div>
+
+          <div class="form-group full">
+            <label for="mensaje">Mensaje adicional</label>
+            <textarea id="mensaje" placeholder="Cuéntanos brevemente sobre el motivo de la consulta..."></textarea>
+          </div>
+
+        </div>
+        <button type="submit" class="btn-submit">SOLICITAR HORA 🐾</button>
+      </form>
+      <p class="form-note">♥ Te contactaremos dentro de las próximas 2 horas hábiles para confirmar tu hora. Para urgencias llama al +56 9 7499 7493.</p>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <span class="foot-heart">♥</span>
+  <p>Zooluciones Veterinarias Integrales, siempre conectados contigo!</p>
+  <span class="foot-heart">♥</span>
+</footer>
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Servicios – VetBarri.cl</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .service-card {
+      background: #fff;
+      border: 2px solid var(--violet-light);
+      border-radius: 12px;
+      padding: 20px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+    }
+    .service-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(107,33,168,0.12);
+      border-color: var(--violet);
+    }
+    .service-card-top { display: flex; align-items: flex-start; gap: 14px; }
+    .service-card-icon {
+      width: 46px; height: 46px;
+      flex-shrink: 0;
+      background: var(--bg);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem;
+    }
+    .service-card h3 { font-weight: 900; font-size: 0.95rem; color: var(--purple); line-height: 1.3; padding-top: 2px; }
+    .service-card p { font-size: 0.83rem; font-weight: 600; color: var(--text-mid); line-height: 1.55; flex: 1; }
+    .service-card-cta {
+      text-decoration: none;
+      display: inline-flex; align-items: center; gap: 6px;
+      font-weight: 900; font-size: 0.82rem; color: var(--pink);
+      align-self: flex-start;
+      transition: gap 0.15s;
+    }
+    .service-card:hover .service-card-cta { gap: 10px; }
+
+    .cta-banner {
+      background: var(--purple);
+      border-radius: 12px;
+      padding: 28px 24px;
+      text-align: center;
+    }
+    .cta-banner h2 {
+      font-family: 'Press Start 2P', monospace;
+      font-size: clamp(0.65rem, 1.8vw, 0.9rem);
+      color: #fff; margin-bottom: 12px; line-height: 1.8;
+    }
+    .cta-banner p { color: var(--violet-light); font-weight: 600; font-size: 0.92rem; margin-bottom: 20px; }
+    .btn-cta {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--pink); color: #fff; font-weight: 900;
+      font-size: 0.9rem; letter-spacing: 1px; padding: 12px 30px;
+      border-radius: 30px; text-decoration: none;
+      box-shadow: 3px 3px 0 rgba(0,0,0,0.2);
+      transition: transform 0.15s;
+    }
+    .btn-cta:hover { transform: translateY(-2px); }
+
+    @media (max-width: 600px) { .services-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<div class="page-wrap">
+
+  <header>
+    <span class="star" style="top:10px;left:10px">✦</span>
+    <span class="star" style="top:40px;left:30px;font-size:0.6rem">✦</span>
+    <span class="star" style="top:5px;right:60px;font-size:0.7rem">✦</span>
+    <span class="star" style="top:50px;right:20px">✦</span>
+    <div class="logo-row">
+      <a href="index.html"><span class="logo-icon">🩺</span></a>
+      <a href="index.html" class="brand-name">@VETBARRI.CL</a>
+      <span class="paw-deco">🐾</span>
+    </div>
+    <p class="tagline">
+      <span class="tagline-heart">♥</span>
+      TU RED VETERINARIA DIGITAL
+      <span class="tagline-heart">♥</span>
+    </p>
+  </header>
+
+  <nav>
+    <a href="index.html" class="nav-link">Inicio</a>
+    <a href="servicios.html" class="nav-link active">Servicios</a>
+    <a href="agendar.html" class="nav-link">Agendar Consulta</a>
+    <a href="contacto.html" class="nav-link">Contacto</a>
+  </nav>
+
+  <div class="page-intro">
+    <h1>🐾 NUESTROS SERVICIOS</h1>
+    <p>Atención veterinaria completa, a domicilio y online, con la calidez que tu mascota merece.</p>
+  </div>
+
+  <div class="services-grid">
+
+    <div class="service-card">
+      <div class="service-card-top">
+        <div class="service-card-icon">🎧</div>
+        <h3>Teleorientación veterinaria</h3>
+      </div>
+      <p>Orientación profesional desde cualquier lugar. Evalúa síntomas, resuelve dudas y recibe guía experta sin salir de casa.</p>
+      <a href="agendar.html" class="service-card-cta">Agendar →</a>
+    </div>
+
+    <div class="service-card">
+      <div class="service-card-top">
+        <div class="service-card-icon">💊</div>
+        <h3>Emisión de órdenes y recetas médicas</h3>
+      </div>
+      <p>Gestión de recetas y órdenes médicas de forma rápida y sin trámites presenciales innecesarios.</p>
+      <a href="agendar.html" class="service-card-cta">Agendar →</a>
+    </div>
+
+    <div class="service-card">
+      <div class="service-card-top">
+        <div class="service-card-icon">🩺</div>
+        <h3>Consulta preventiva</h3>
+      </div>
+      <p>Control periódico del estado de salud general para detectar problemas antes de que se conviertan en urgencias.</p>
+      <a href="agendar.html" class="service-card-cta">Agendar →</a>
+    </div>
+
+    <div class="service-card">
+      <div class="service-card-top">
+        <div class="service-card-icon">💉</div>
+        <h3>Vacunación y desparasitación</h3>
+      </div>
+      <p>Esquema de vacunas personalizado y desparasitación efectiva, adaptados a la especie, edad y estilo de vida.</p>
+      <a href="agendar.html" class="service-card-cta">Agendar →</a>
+    </div>
+
+    <div class="service-card">
+      <div class="service-card-top">
+        <div class="service-card-icon">🌍</div>
+        <h3>Certificados de viaje</h3>
+      </div>
+      <p>Documentación veterinaria oficial para viajar con tu mascota dentro y fuera de Chile, cumpliendo todos los requisitos.</p>
+      <a href="agendar.html" class="service-card-cta">Agendar →</a>
+    </div>
+
+    <div class="service-card">
+      <div class="service-card-top">
+        <div class="service-card-icon">❤️</div>
+        <h3>Control de pacientes crónicos</h3>
+      </div>
+      <p>Seguimiento continuo y personalizado de enfermedades crónicas como diabetes, insuficiencia renal y cardiopatías.</p>
+      <a href="agendar.html" class="service-card-cta">Agendar →</a>
+    </div>
+
+    <div class="service-card">
+      <div class="service-card-top">
+        <div class="service-card-icon">🤲</div>
+        <h3>Cuidados paliativos</h3>
+      </div>
+      <p>Acompañamiento profesional y compasivo para mascotas en etapas terminales, priorizando su confort y calidad de vida.</p>
+      <a href="agendar.html" class="service-card-cta">Agendar →</a>
+    </div>
+
+    <div class="service-card">
+      <div class="service-card-top">
+        <div class="service-card-icon">🐾</div>
+        <h3>Segunda opinión veterinaria</h3>
+      </div>
+      <p>Confirmamos diagnósticos o proponemos alternativas de tratamiento con base en los antecedentes clínicos.</p>
+      <a href="agendar.html" class="service-card-cta">Agendar →</a>
+    </div>
+
+    <div class="service-card">
+      <div class="service-card-top">
+        <div class="service-card-icon">🥗</div>
+        <h3>Asesoría nutricional</h3>
+      </div>
+      <p>Planes alimenticios personalizados adaptados a las necesidades específicas, etapa de vida y condición de tu mascota.</p>
+      <a href="agendar.html" class="service-card-cta">Agendar →</a>
+    </div>
+
+    <div class="service-card">
+      <div class="service-card-top">
+        <div class="service-card-icon">🧪</div>
+        <h3>Toma y procesamiento de muestras</h3>
+      </div>
+      <p>Exámenes de laboratorio a domicilio o de forma remota, con resultados rápidos y análisis profesional.</p>
+      <a href="agendar.html" class="service-card-cta">Agendar →</a>
+    </div>
+
+  </div>
+
+  <div class="cta-banner">
+    <h2>¿LISTA PARA AGENDAR?</h2>
+    <p>Servicio 24 horas disponible para urgencias. Sin filas, sin esperas.</p>
+    <a href="agendar.html" class="btn-cta">🗓️ RESERVAR HORA</a>
+  </div>
+
+</div>
+
+<footer>
+  <span class="foot-heart">♥</span>
+  <p>Zooluciones Veterinarias Integrales, siempre conectados contigo!</p>
+  <span class="foot-heart">♥</span>
+</footer>
+</body>
+</html>

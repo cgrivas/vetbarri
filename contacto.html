@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto – VetBarri.cl</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 20px;
+      align-items: start;
+    }
+    .info-panel { display: flex; flex-direction: column; gap: 16px; }
+
+    .info-card {
+      background: #fff;
+      border: 2px solid var(--violet-light);
+      border-radius: 12px;
+      padding: 18px;
+    }
+    .info-card h2 {
+      font-family: 'Press Start 2P', monospace;
+      font-size: 0.58rem; color: var(--purple);
+      margin-bottom: 16px; letter-spacing: 0.5px;
+    }
+    .contact-row {
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 12px; font-weight: 700; font-size: 0.9rem;
+      text-decoration: none; color: var(--text-dark);
+      transition: opacity 0.15s;
+    }
+    .contact-row:last-child { margin-bottom: 0; }
+    .contact-row:hover { opacity: 0.7; }
+    .ci-box {
+      width: 38px; height: 38px;
+      background: var(--pink); border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; flex-shrink: 0;
+    }
+
+    .hours-card {
+      background: #f3e8ff;
+      border: 2px solid var(--violet-light);
+      border-radius: 12px; padding: 18px;
+    }
+    .hours-card h2 {
+      font-family: 'Press Start 2P', monospace;
+      font-size: 0.58rem; color: var(--purple); margin-bottom: 14px;
+    }
+    .hours-row {
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: 0.85rem; font-weight: 700; margin-bottom: 10px; color: var(--text-mid);
+    }
+    .hours-row:last-child { margin-bottom: 0; }
+    .badge-urgencia {
+      background: var(--pink); color: #fff;
+      font-size: 0.68rem; font-weight: 900;
+      padding: 2px 10px; border-radius: 20px;
+    }
+
+    .doctor-mini {
+      background: var(--purple); border-radius: 12px;
+      padding: 18px; text-align: center;
+    }
+    .doctor-mini .label  { color: var(--violet-light); font-weight: 700; font-size: 0.82rem; margin-bottom: 6px; }
+    .doctor-mini .name   { color: #fff; font-weight: 900; font-size: 1.05rem; margin-bottom: 4px; }
+    .doctor-mini .title-small {
+      font-family: 'Press Start 2P', monospace;
+      font-size: 0.45rem; color: var(--violet-light); letter-spacing: 0.5px;
+    }
+
+    .form-body { padding: 22px 24px; }
+    .form-group { margin-bottom: 14px; }
+    .form-group:last-of-type { margin-bottom: 0; }
+
+    .whatsapp-btn {
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      background: #25D366; color: #fff; font-weight: 900; font-size: 0.92rem;
+      letter-spacing: 0.5px; padding: 12px; border-radius: 10px;
+      text-decoration: none; margin-top: 14px;
+      box-shadow: 3px 3px 0 #128C7E;
+      transition: transform 0.15s;
+    }
+    .whatsapp-btn:hover { transform: translateY(-2px); }
+
+    @media (max-width: 640px) {
+      .contact-layout { grid-template-columns: 1fr; }
+      .form-body { padding: 18px; }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrap">
+
+  <header>
+    <span class="star" style="top:10px;left:10px">✦</span>
+    <span class="star" style="top:40px;left:30px;font-size:0.6rem">✦</span>
+    <span class="star" style="top:5px;right:60px;font-size:0.7rem">✦</span>
+    <span class="star" style="top:50px;right:20px">✦</span>
+    <div class="logo-row">
+      <a href="index.html"><span class="logo-icon">🩺</span></a>
+      <a href="index.html" class="brand-name">@VETBARRI.CL</a>
+      <span class="paw-deco">🐾</span>
+    </div>
+    <p class="tagline">
+      <span class="tagline-heart">♥</span>
+      TU RED VETERINARIA DIGITAL
+      <span class="tagline-heart">♥</span>
+    </p>
+  </header>
+
+  <nav>
+    <a href="index.html" class="nav-link">Inicio</a>
+    <a href="servicios.html" class="nav-link">Servicios</a>
+    <a href="agendar.html" class="nav-link">Agendar Consulta</a>
+    <a href="contacto.html" class="nav-link active">Contacto</a>
+  </nav>
+
+  <div class="page-intro">
+    <h1>📬 CONTACTO</h1>
+    <p>Estamos siempre disponibles. Escríbenos o llámanos directamente.</p>
+  </div>
+
+  <div class="contact-layout">
+
+    <div class="info-panel">
+      <div class="info-card">
+        <h2>📋 DATOS DE CONTACTO</h2>
+        <a href="tel:+56974997493" class="contact-row">
+          <div class="ci-box">📞</div>+56 9 7499 7493
+        </a>
+        <a href="mailto:dra@vetbarri.cl" class="contact-row">
+          <div class="ci-box">✉️</div>dra@vetbarri.cl
+        </a>
+        <a href="https://instagram.com/vetbarri.cl" target="_blank" class="contact-row">
+          <div class="ci-box">📸</div>@vetbarri.cl
+        </a>
+      </div>
+
+      <div class="hours-card">
+        <h2>🕐 HORARIOS</h2>
+        <div class="hours-row">
+          <span>Lunes – Viernes</span>
+          <span>8:00 – 20:00</span>
+        </div>
+        <div class="hours-row">
+          <span>Sábado</span>
+          <span>9:00 – 14:00</span>
+        </div>
+        <div class="hours-row">
+          <span>Urgencias</span>
+          <span class="badge-urgencia">24 / 7</span>
+        </div>
+      </div>
+
+      <div class="doctor-mini">
+        <p class="label">Atendido por</p>
+        <p class="name">Dra. María Jesús Barriga</p>
+        <p class="title-small">MÉDICO VETERINARIO</p>
+      </div>
+    </div>
+
+    <div class="retro-window">
+      <div class="retro-titlebar">
+        <span>ENVÍANOS UN MENSAJE 💌</span>
+        <div class="win-btns">
+          <div class="win-btn">─</div>
+          <div class="win-btn">□</div>
+          <div class="win-btn">✕</div>
+        </div>
+      </div>
+      <div class="form-body">
+        <form action="#" onsubmit="return false;">
+
+          <div class="form-group">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" placeholder="Tu nombre" />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" placeholder="tu@correo.cl" />
+          </div>
+
+          <div class="form-group">
+            <label for="telefono">Teléfono (opcional)</label>
+            <input type="tel" id="telefono" placeholder="+56 9 XXXX XXXX" />
+          </div>
+
+          <div class="form-group">
+            <label for="asunto">Asunto</label>
+            <select id="asunto">
+              <option value="">Seleccionar...</option>
+              <option>Consulta general</option>
+              <option>Agendar hora</option>
+              <option>Información de servicios</option>
+              <option>Urgencia</option>
+              <option>Otro</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" style="min-height:110px" placeholder="¿En qué podemos ayudarte?"></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit">ENVIAR MENSAJE ✉️</button>
+        </form>
+        <a href="https://wa.me/56974997493" target="_blank" class="whatsapp-btn">
+          💬 Escribir por WhatsApp
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<footer>
+  <span class="foot-heart">♥</span>
+  <p>Zooluciones Veterinarias Integrales, siempre conectados contigo!</p>
+  <span class="foot-heart">♥</span>
+</footer>
+</body>
+</html>
